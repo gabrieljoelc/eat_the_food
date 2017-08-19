@@ -50,6 +50,8 @@ gem 'bootstrap-sass', '~> 3.3'
 # Use Font Awesome Rails for Font Awesome icons
 gem 'font-awesome-rails', '~> 4.7'
 
+gem 'activeadmin', '~> 1.1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in your code to drop into a debugger console
   gem 'byebug', platform: :mri
