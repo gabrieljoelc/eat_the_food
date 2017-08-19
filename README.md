@@ -30,3 +30,12 @@ dcu
 
 Open http://localhost:3000
 
+## Deployment
+
+### Heroku
+
+```
+heroku container:login
+heroku container:push -R
+```
+
