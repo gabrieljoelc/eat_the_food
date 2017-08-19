@@ -1,24 +1,43 @@
-# README
+# (Tina, ) Eat The Food
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![image](https://user-images.githubusercontent.com/147849/29489509-89dadeea-84d7-11e7-951f-4b0cdb8aa672.png)
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+* [Docker](https://docs.docker.com/engine/installation/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-* System dependencies
+## Setup
 
-* Configuration
+### Convenient aliases for Docker Compose
+Add the following to your `~/.bash_aliases`:
 
-* Database creation
+```
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
+alias dcu='docker-compose up'
+```
 
-* Database initialization
+Then:
 
-* How to run the test suite
+```
+source ~/.bash_aliases
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Running Locally
 
-* Deployment instructions
+```
+dcu
+```
 
-* ...
+Open http://localhost:3000
+
+## Deployment
+
+### Heroku
+
+```
+heroku container:login
+heroku container:push -R
+```
+
