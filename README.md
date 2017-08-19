@@ -1,24 +1,32 @@
-# README
+# (Tina, ) Eat The Food
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
 
-Things you may want to cover:
+* [Docker](https://docs.docker.com/engine/installation/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-* Ruby version
+## Setup
 
-* System dependencies
+### Convenient aliases for Docker Compose
+Add the following to your `~/.bash_aliases`:
 
-* Configuration
+```
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
+alias dcu='docker-compose up'
+```
 
-* Database creation
+Then:
 
-* Database initialization
+```
+source ~/.bash_aliases
+```
 
-* How to run the test suite
+## Running Locally
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+dcu
+```
 
-* Deployment instructions
+Open http://localhost:3000
 
-* ...
