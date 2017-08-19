@@ -1,24 +1,14 @@
-# README
+# (Tina, ) Eat The Food
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
 
-Things you may want to cover:
+- Docker and Docker Compose
 
-* Ruby version
+## Development
 
-* System dependencies
+```
+docker-compose up
+```
 
-* Configuration
+Development url: http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
