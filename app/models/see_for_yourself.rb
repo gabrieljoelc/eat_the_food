@@ -1,0 +1,2 @@
+class SeeForYourself < ApplicationRecord
+end
