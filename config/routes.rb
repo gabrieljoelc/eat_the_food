@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resources :see_for_yourselves, only: %i[index show]
 
+  resources :distinct_email_tests, only: %i[index create]
+
   root 'pages#home'
 end
