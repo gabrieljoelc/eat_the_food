@@ -6,7 +6,13 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'EatTheFood', root_path, class: 'navbar-brand'
+      = link_to_unless(current_page?(root_path), '(Tina, ) Eat The Food', root_path, class: 'navbar-brand') do
+        %a.navbar-brand (Tina, ) Eat The Food
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li= link_to 'Test nav item', root_path
+        %li
+          = link_to_unless(current_page?(see_for_yourselves_path), 'See for yourselves', see_for_yourselves_path) do
+            %a See for yourselves
+        %li
+          = link_to_unless(current_page?(distinct_email_tests_path), 'Distinct e-mail tests', distinct_email_tests_path) do
+            %a Distinct e-mail tests
