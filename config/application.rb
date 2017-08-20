@@ -5,6 +5,8 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+# hack to require an Array monkey patch
+require_relative '../lib/distinct'
 
 module EatTheFood
   class Application < Rails::Application
@@ -64,6 +66,9 @@ module EatTheFood
     config.generators do |g|
       g.javascript_engine :js
     end
+
+    config.autoload_paths += [config.root.join('lib'), config.root.join('lib', 'distinctifier')]
+    config.eager_load_paths += [config.root.join('lib'), config.root.join('lib', 'distinctifier')]
   end
 end
 
