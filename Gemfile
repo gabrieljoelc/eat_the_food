@@ -55,6 +55,8 @@ gem 'devise', '~> 4.3.0'
 
 gem 'haml-rails', '~> 1.0.0'
 
+gem 'faker', '~> 1.8.4', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in your code to drop into a debugger console
   gem 'byebug', platform: :mri
