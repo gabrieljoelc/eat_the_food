@@ -6,7 +6,16 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'EatTheFood', root_path, class: 'navbar-brand'
+      - if current_page?(root_path)
+        %a.navbar-brand= image_tag('tina.png', alt: '(Tina, ) Eat The Food', style: 'height: 20px')
+      - else
+        = link_to(root_path, class: 'navbar-brand') do
+          = image_tag('tina.png', alt: '(Tina, ) Eat The Food', style: 'height: 20px')
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li= link_to 'Test nav item', root_path
+        %li
+          = link_to_unless(current_page?(see_for_yourselves_path), 'See for yourselves', see_for_yourselves_path) do
+            %a See for yourselves
+        %li
+          = link_to_unless(current_page?(distinct_email_tests_path), 'Distinct e-mail tests', distinct_email_tests_path) do
+            %a Distinct e-mail tests
