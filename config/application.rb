@@ -60,6 +60,10 @@ module EatTheFood
     origins = ENV['ACTION_CABLE_ALLOWED_REQUEST_ORIGINS'].split(',')
     origins.map! { |url| /#{url}/ }
     config.action_cable.allowed_request_origins = origins
+
+    config.generators do |g|
+      g.javascript_engine :js
+    end
   end
 end
 
