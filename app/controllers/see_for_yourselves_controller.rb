@@ -4,5 +4,6 @@ class SeeForYourselvesController < ApplicationController
   end
 
   def show
+    @see_for_yourself = SeeForYourself.find(params[:id])
   end
 end
