@@ -2,4 +2,4 @@
 
 %ul
   - @see_for_yourselves.each do |qa|
-    %li= qa.question
+    %li= link_to qa.question, see_for_yourself_path(qa)
