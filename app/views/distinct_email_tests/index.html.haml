@@ -1,0 +1,19 @@
+%h1 De-dup some emails yo
+
+%p This will generate 100 randomly generated emails with 50% of them being duplicates (the location of the duplicates in the list are also random).
+
+%p It will then remove all duplicates while maintaing the original order.
+
+=button_to "Run test", distinct_email_tests_path
+
+- if @tests.present?
+  .container
+    - @tests.each_with_index do |(sample, test), index|
+      .row
+        %h2 Test #{index + 1}
+        .col
+          %h3 Source
+          %p= sample
+        .col
+          %h3 Result
+          %p= test.actual

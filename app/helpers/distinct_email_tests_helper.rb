@@ -1,0 +1,2 @@
+module DistinctEmailTestsHelper
+end
