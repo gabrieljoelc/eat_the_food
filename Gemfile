@@ -53,6 +53,8 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'activeadmin', '~> 1.1.0'
 gem 'devise', '~> 4.3.0'
 
+gem 'haml-rails', '~> 1.0.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in your code to drop into a debugger console
   gem 'byebug', platform: :mri
