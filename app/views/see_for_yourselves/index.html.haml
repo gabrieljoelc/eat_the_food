@@ -1,0 +1,5 @@
+%h1 Email Screen Questions
+
+%ul
+  - @see_for_yourselves.each do |qa|
+    %li= link_to qa.question, see_for_yourself_path(qa)
