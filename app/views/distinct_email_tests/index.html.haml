@@ -3,7 +3,10 @@
 
 .row
   .col-md-6
-    %p This will generate 100 randomly generated emails with 50% of them being duplicates (the location of the duplicates in the list are also random).
+    %p
+      This will
+      = link_to 'generate 100 randomly generated emails', 'https://github.com/gabrieljoelc/eat_the_food/blob/9afc7906e5277f1f011a904a6138829e4806a9c6/app/controllers/distinct_email_tests_controller.rb#L8'
+      with 50% of them being duplicates (the location of the duplicates in the list are also random).
 
     %p It will then remove all duplicates while maintaing the original order.
 
