@@ -13,6 +13,33 @@
       There's only 100 emails here because 100,000 is unwieldy for a web page. Please, see the Travis build for the 100,000 email test and benchmark numbers.
       = link_to 'https://travis-ci.org/gabrieljoelc/eat_the_food' do
         = image_tag src='https://api.travis-ci.org/gabrieljoelc/eat_the_food.svg?branch=master'
+    %p
+      You will find 4 source code files in the
+      %code
+        = link_to 'https://github.com/gabrieljoelc/eat_the_food/tree/master/lib' do
+          \/lib
+      directory:
+    %ul
+      %li
+        Ruby
+        %code Array
+        extension that does the deduping.
+        = link_to 'here', 'https://github.com/gabrieljoelc/eat_the_food/blob/master/lib/distinct.rb'
+      %li
+        %code Distinctifier::Test
+        \- Test class that invokes the extension and compares the results with the core Ruby
+        %code Array#uniq
+        \.
+        = link_to 'here', 'https://github.com/gabrieljoelc/eat_the_food/blob/master/lib/distinct.r://github.com/gabrieljoelc/eat_the_food/blob/master/lib/distinctifier/test.rb'
+      %li
+        %code Distinctifier::TestRunner
+        \- Test runner class that iterates through samples and associates them with the source list. It also includes a benchmark method.
+        = link_to 'here', 'https://github.com/gabrieljoelc/eat_the_food/blob/master/lib/distinctifier/test_runner.rb'
+      %li
+        %code EmailSampleGenerator
+        \-
+        Email generator class that randomly generates fake emails.
+        = link_to 'here', 'https://github.com/gabrieljoelc/eat_the_food/blob/master/lib/email_sample_generator.rb'
 
 - if @tests.present?
   .container
