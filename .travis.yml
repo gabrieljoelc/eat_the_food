@@ -1,0 +1,10 @@
+services:
+  - postgresql
+sudo: false
+cache: bundler
+language: ruby
+rvm:
+  - 2.4.1
+env: ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=https://mysweetbestsite.com LOG_LEVEL=debug SECRET_TOKEN=YOYOYOYOYYOYOYOYOYO DATABASE_URL=postgres://dummy:dummy@postgres:5432/dummy
+script: "bundle exec rails r 'Distinctifier::TestRunner.new(:distinct).run_with_benchmark(EmailSampleGenerator.new(count: 100_000).gen)'"
+

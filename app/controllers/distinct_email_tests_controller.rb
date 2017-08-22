@@ -3,7 +3,7 @@ class DistinctEmailTestsController < ApplicationController
   end
 
   def create
-    flash['notice'] = 'De-duped yo'
+    flash['notice'] = 'Deduped yo'
 
     @tests = ::Distinctifier::TestRunner.new.run_with_benchmark(::EmailSampleGenerator.new(count: 100).gen)
 
