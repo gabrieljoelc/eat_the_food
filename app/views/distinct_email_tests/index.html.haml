@@ -1,10 +1,18 @@
-%h1 De-dup some emails yo
+- title 'Gabriel Chaney'
+- heading 'Dedup some emails'
 
-%p This will generate 100 randomly generated emails with 50% of them being duplicates (the location of the duplicates in the list are also random).
+.row
+  .col-md-6
+    %p This will generate 100 randomly generated emails with 50% of them being duplicates (the location of the duplicates in the list are also random).
 
-%p It will then remove all duplicates while maintaing the original order.
+    %p It will then remove all duplicates while maintaing the original order.
 
-=button_to "Run test", distinct_email_tests_path
+    =button_to "Run test", distinct_email_tests_path
+  .col-md-6
+    %p
+      There's only 100 emails here because 100,000 is unwieldy for a web page. Please, see Codeship for the 100,000 email test and benchmark numbers
+      = link_to 'https://app.codeship.com/projects/241563' do
+        = image_tag src='https://app.codeship.com/projects/7de1a700-692d-0135-758d-6e813bb2eee9/status?branch=master'
 
 - if @tests.present?
   .container
