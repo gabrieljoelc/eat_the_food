@@ -1,7 +1,34 @@
-- #heading '(Tina, ) Eat The Food' 
+- title '(Tina, ) Eat The Food' 
+- heading '(Tina, ) Eat The Food' 
 .row
-  .col-sm-8
+  .col-sm-3
     = image_tag 'tina.png', alt: 'Tina'
-    %p.lead
-      Hello! Thanks for looking.
-  .col-sm-4
+  .col-sm-3
+    %p.lead Hello! See the header nav for the goodies.
+    %p Thanks for looking.
+  .col-sm-3
+    %p Fun facts about this interweb application:
+    %ul
+      %li
+        It can be found here in
+        = link_to 'GitHub', 'https://github.com/gabrieljoelc/eat_the_food'
+      %li It is Rails 5.1 with Ruby 2.4.1
+      %li
+        It is inside a Docker image deployed to
+        = link_to 'Heroku', 'https://github.com/gabrieljoelc/eat_the_food#heroku'
+    %p Wishlist:
+    %ul
+      %li Add automated tests
+      %li Add continuous integration/delivery
+  .col-sm-3
+    %p Fun facts about me:
+    %ul
+      %li
+        I have a
+        = link_to 'website', 'http://www.gabrielchaney.com'
+        with resume things and social profiles
+      %li
+        A couple of open source projects that are important to me that I participate in:
+        = link_to 'la_gear', 'https://github.com/giftcardzen/la_gear/commits?author=gabrieljoelc'
+        and
+        = link_to 'sneakers', 'https://github.com/jondot/sneakers/commits?author=gabrieljoelc'
