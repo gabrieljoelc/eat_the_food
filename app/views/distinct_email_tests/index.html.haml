@@ -13,7 +13,11 @@
     =button_to "Run test", distinct_email_tests_path
   .col-md-6
     %p
-      There's only 100 emails here because 100,000 is unwieldy for a web page. Please, see the Travis build for the 100,000 email test and benchmark numbers.
+      There's only 100 emails here because 100,000 is unwieldy for a web page. Please, see the Travis build for the 100,000 email test and benchmark numbers
+      (see
+      %strong
+        = link_to 'this', 'https://travis-ci.org/gabrieljoelc/eat_the_food/builds/267114357#L564-L567'
+      example).
       = link_to 'https://travis-ci.org/gabrieljoelc/eat_the_food' do
         = image_tag src='https://api.travis-ci.org/gabrieljoelc/eat_the_food.svg?branch=master'
     %p
