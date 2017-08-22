@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
       - if current_page?(root_path)
-        %a.navbar-brand= image_tag('tina.png', alt: '(Tina, ) Eat The Food', style: 'height: 20px')
+        %a.navbar-brand= image_tag('tina.png', alt: '(Tina, ) Eat The Food', style: 'height: 20px', title: '(Tina, ) Eat The Food')
       - else
         = link_to(root_path, class: 'navbar-brand') do
           = image_tag('tina.png', alt: '(Tina, ) Eat The Food', style: 'height: 20px')
