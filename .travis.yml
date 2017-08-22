@@ -4,7 +4,7 @@ sudo: false
 cache: bundler
 language: ruby
 rvm:
-  - "2.4.1"
+  - 2.4.1
 matrix:
   include:
     - rvm: 2.2.5
@@ -12,4 +12,5 @@ matrix:
         - ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=https://mysweetbestsite.com
         - LOG_LEVEL=debug
         - SECRET_TOKEN=YOYOYOYOYYOYOYOYOYO
+script: bundle exec rails r 'Distinctifier::TestRunner.new(:distinct).run_with_benchmark(EmailSampleGenerator.new(count: 100_000).gen)'
 
