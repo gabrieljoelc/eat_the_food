@@ -3,7 +3,9 @@
 .row
   .col-md-12
     %p
-      The URLs aren't in anchor tags because I didn't spend the time to do user input markup. The questions and answers are being pulled from the database.
+      The URLs aren't in anchor tags because I didn't spend the time to do user input markup. The
+      =link_to 'questions and answers', see_for_yourselves_path(format: 'json')
+      are being pulled from the database.
       I wrote them in the
       = link_to 'ActiveAdmin', admin_root_path
       CMSish tool I included.
