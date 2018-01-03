@@ -11,10 +11,13 @@
 ## Development
 
 ```
-docker-compose up
+cp .env.example .env
+docker-compose up website
 ```
 
 Development url: http://localhost:3000
+
+Note: the other services in `docker-compose.yml` are not yet setup.
 
 ## Deployment
 
